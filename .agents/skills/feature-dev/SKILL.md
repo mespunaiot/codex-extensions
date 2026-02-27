@@ -1,7 +1,8 @@
 ---
-description: Discuss and align first, then implement in a worktree and open a draft PR of the new feature
-argument-hint: <feature-description or file path of the feature description>
+name: feature-dev
+description: 'Discuss and align first, then implement in a worktree and open a draft PR of the new feature'
 ---
+
 
 Execute this workflow in two mandatory phases.
 
