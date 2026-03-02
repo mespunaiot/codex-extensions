@@ -31,6 +31,7 @@ Do not rush to implementation. Phase 1 must complete first, with explicit user c
 7. Ask for explicit go-ahead.
 8. Do not start Phase 2 until the user confirms explicitly.
 NOTE: During the discussion phase, the user might ask you ( you can suggest him also ) to write down your investigations, analisys, reports, questions and clarifications to a markdown file inside `.agents/docs/<tile>.md`. This is interesting in order to keep records and important findings encountered during this discussion/planification phase. Feel free also to suggest to the user to write relevant documentation down if you see a clear benefit to doing so.
+IMPORTANT: Files created under `.agents/docs/` are local working notes only. Leave them untracked and never commit or push them upstream. If one is accidentally staged, remove it from the commit before proceeding.
 
 ## Phase 2: Execution Workflow (After Approval)
 1. Derive a branch slug from the title: lowercase kebab-case, only `[a-z0-9-]`, collapse repeated dashes.
