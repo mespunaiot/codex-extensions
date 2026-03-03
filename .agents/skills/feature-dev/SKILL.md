@@ -3,7 +3,6 @@ name: feature-dev
 description: 'Discuss and align first, then implement in a worktree and open a draft PR of the new feature'
 ---
 
-
 Execute this workflow in two mandatory phases.
 
 Do not rush to implementation. Phase 1 must complete first, with explicit user confirmation, before Phase 2 starts.
@@ -25,7 +24,7 @@ Do not rush to implementation. Phase 1 must complete first, with explicit user c
 5. Align with the user on testing scope:
    - Unit test coverage extent
    - Integration test needs
-   - Any other form of testing is required? ( ej, connecting to remove environments for testing, writing and running temporary helper/test scripts)
+   - Manual and explicit testing/validations ( ej, connecting to remote environments/machine and test on actual hw, debug communications and running temporary helper/test scripts for further validation during this process)
    - What can be skipped and under which conditions
 6. Produce an Implementation Agreement summary.
 7. Ask for explicit go-ahead.
@@ -56,7 +55,16 @@ IMPORTANT: Files created under `.agents/docs/` are local working notes only. Lea
 2. Add or update unit tests according to the agreed testing scope.
 3. Run targeted unit tests first.
 4. Run integration tests when agreed and feasible.
-5. If compilation/unit/integration validation is not possible or would require disproportionate setup/work, explicitly document what was skipped and why, then continue.
+5. Execute the agreed manual validation. Skip if not applicable.
+6. If compilation/unit/integration/manual validation is not possible or would require disproportionate setup/work, explicitly document what was skipped and why, then continue.
+
+## Review
+Perform an in-depth review. Evaluate as well if there is any "dead code" left or code that during this changes have become unuseful and should be removed/simplified. The review should be constructive, adding suggestions and guidance to each of the findings.
+
+Once the review is complete, the findings should be fixed and the validation rerunned. The validation should attempt to include targeted testing where possible so we have a high confidence to have covered the findings and not broken anything during the process.
+
+## Phase 3:
+If phase 2 has gone according to plan, the tests are passing, manual verification is healthy (if applicable) and there are no critical or high severity issues left, continue to phase 3 without asking the user.
 
 ## Commit, Push, and Draft PR
 1. Stage only relevant files.
@@ -80,6 +88,7 @@ Report:
 - Validation executed and skipped (with reasons)
 - Commit SHA
 - Draft PR URL
+- Any relevant issues or relevant notes that the user should be aware of
 
 ## Guardrails
 - Keep the primary workspace untouched; do not implement in the original checkout.
@@ -88,4 +97,4 @@ Report:
 - During Phase 1, proactively ask clarifying questions instead of inferring critical product decisions.
 
 # NOTE
-If, during these command steps, you encounter errors, blockers, or generic issues (such as strange behavior from the GitHub CLI or other relevant tools in this workflow), create a markdown file in `.agents/blockers` folder. Document the issues encountered and any information that would have been helpful to know from the start, for example, the correct way to execute a specific `gh` command or a `git` command etc.
+If, during these command steps, you encounter errors, blockers, or generic issues (such as strange behavior from the GitHub CLI or other relevant tools in this workflow), create a markdown file in `.agents/blockers` folder. Document the issues encountered and any information that would have been helpful to know from the start, for example, the correct way to execute a specific `gh` command, unexpected helper script beheivours, etc.
