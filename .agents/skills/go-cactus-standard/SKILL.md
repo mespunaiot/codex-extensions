@@ -1,11 +1,11 @@
 ---
-name: cactus-standard
-description: Go coding standards and conventions for Cactus projects. Use when reviewing code, writing new Go code, or checking PR compliance with team standards. Covers package structure, interface design, manager pattern, mock generation, testing standards, naming conventions, configuration, logging, documentation, and terminology.
+name: go-cactus-standard
+description: Go coding standards and conventions for Cactus Go codebases. Use only when reviewing code, writing code, or checking PR compliance for Go projects, or when a repository explicitly asks for this Go standard. Do not use for C, C++, Python, or other non-Go codebases. Covers package structure, interface design, manager pattern, mock generation, testing standards, naming conventions, configuration, logging, documentation, and terminology.
 ---
 
-# Cactus Coding Standards
+# Cactus Go Coding Standards
 
-This document outlines the coding conventions and standards for Go projects at Cactus. Following these guidelines ensures consistency across the codebase and facilitates code reviews.
+This document outlines the coding conventions and standards for Go projects at Cactus. Use it only for Go codebases; it does not apply to C, C++, Python, or other non-Go repositories. Following these guidelines ensures consistency across the codebase and facilitates code reviews.
 
 ## Table of Contents
 
