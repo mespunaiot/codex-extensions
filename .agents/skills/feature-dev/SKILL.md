@@ -71,7 +71,9 @@ If phase 2 has gone according to plan, the tests are passing, manual verificatio
 2. Create a clear commit message describing the feature.
 3. Push with upstream: `git push -u origin "feature/<slug>"`.
 4. Select PR base branch in this order (remote): `develop`, fallback `main`, fallback `master`.
-5. Open a draft PR against that base branch.
+5. Open a draft PR against that base branch and assign the current GitHub user as assignee.
+   - Prefer creating it with `--assignee @me`.
+   - If the CLI flow requires a separate step, immediately run `gh pr edit --add-assignee @me` after creation.
 6. Before creating or finalizing the PR, check the available repo labels with `gh label list` and attach the appropriate ones.
 7. PR body must include:
    - Intent of the PR
