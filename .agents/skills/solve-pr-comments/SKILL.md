@@ -1,6 +1,6 @@
 ---
-name: gh-address-pr-comments
-description: 'Review GitHub PR comments, decide whether each finding is correct for the current diff, fix and validate accurate findings, or reply and resolve inaccurate or out-of-scope findings. Use whenever the user asks to triage, address, dismiss, or resolve PR review comments.'
+name: solve-pr-comments
+description: 'Review GitHub PR comments, decide whether each finding is correct for the current diff, fix and validate accurate findings, or reply and resolve inaccurate or out-of-scope findings. Use whenever the user asks to triage, address, dismiss, solve, or resolve PR review comments.'
 ---
 
 You are handling GitHub PR review comments for an existing pull request.
